@@ -1,5 +1,5 @@
 # puzzle_generator
-generate 3 by 2 puzzles in rust with any image
+generate 3 by 2 puzzles in rust with any image using plotters and image crates
 
 put however many puzzles pieces u want on line 193 (let pieces = {number of pieces u want}f64)
 
