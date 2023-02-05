@@ -143,10 +143,10 @@ fn vert_bspline_cpoints(start_point: (f64, f64), end_point: (f64, f64)) -> Vec<(
 
 
 //Calculate the points on arbitrary B-spline curve using the b_spline function
-fn splinerx0v0(cum: Vec<(f64, f64)>) -> Vec<(f64, f64)>{
+fn splinerx0v0(points: Vec<(f64, f64)>) -> Vec<(f64, f64)>{
     let mut data = vec![];
     for t in 0..100 {
-        let x = b_spline(&cum, t as f64 / 100.0);
+        let x = b_spline(&points, t as f64 / 100.0);
         data.push(x);
     }
     data
