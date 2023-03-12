@@ -1,9 +1,12 @@
+TODO: make a gui
+TODO: abstract puzzle size  
+
 # puzzle_generator
 generate 3 by 2 puzzles in rust with any image using plotters and image crates
 
-put however many puzzles pieces u want on line 193 (let pieces = {number of pieces u want}f64)
+put the amount of puzzles pieces you want on line 193 (let pieces = {number of pieces you want}f64)
 
-Basically just divides up the piece count into the middlemost factors, and subdivides the dimensions of the puzzle by the factors. Uses those subdivisions to make b spline curves based on start and endpoints with slight variations. I don't know why I felt like not using the random crate, but I made a pseudorandom number generator to pick the variance.
+Basically just divides up the piece count into the middlemost factors, and subdivides the dimensions of the puzzle by the factors. Uses those subdivisions to make b spline curves based on start and endpoints with slight variations.
 
 this is the first rust thing I've ever done besides hello world so please be nice 
 
