@@ -1,6 +1,4 @@
-TODO: make a gui
-TODO: abstract puzzle dimensions  
-TODO: add a more thoughtful random number gen
+TODO: make a gui // abstract puzzle dimensions // add a more thoughtful random number gen
 
 
 # puzzle_generator
