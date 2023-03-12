@@ -1,5 +1,5 @@
 TODO: make a gui
-TODO: abstract puzzle size  
+TODO: abstract puzzle dimensions  
 
 # puzzle_generator
 generate 3 by 2 puzzles in rust with any image using plotters and image crates
