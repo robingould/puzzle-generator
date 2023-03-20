@@ -6,7 +6,7 @@ generate 3 by 2 puzzles in rust with any image using plotters and image crates
 
 put the amount of puzzles pieces you want on line 193 (let pieces = {number of pieces you want}f64)
 
-Basically just divides up the piece count into the middlemost factors, and subdivides the dimensions of the puzzle by the factors. Uses those subdivisions to make b spline curves based on start and endpoints with slight variations.
+Basically just divides up the piece count into the middlemost factors, and subdivides the dimensions of the puzzle by the factors. Uses those subdivisions to make b spline curves based on start and endpoints with slight random variations.
 
 this is the first rust thing I've ever done besides hello world so please be nice 
 
