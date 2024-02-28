@@ -7,8 +7,7 @@ use std::time::{SystemTime, UNIX_EPOCH};
 fn b_spline(points: &[(f64, f64)], t: f64) -> (f64, f64) {
     //setting variables to represent numerator (sum i=1 -> 6 L_dimension(i)h(i,t)) and denominator (sum i=1 -> 6 h(i,t))
     //where L_dimension(i) is the individual control points where dimension can be x or y
-    //where h(i, t) is our scaling factor, which I have chosen to be 4.5^(-(i - (6 + 1)*t)^2)
-    //Yes this may be an arguably extremely innefficient way of doing this, however it works and I don't wanna think about it anymore because this is my second day using Rust. Ratio.
+    //where h(i, t) is our scaling factor, which I have chosen to be 4.5^(-(i - (6 + 1)*t)^2) 
     let mut numerx = 0.0;
     let mut denomx = 0.0;
     let mut numery = 0.0;
@@ -191,11 +190,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     chart.draw_series(std::iter::once(elem))?;
         let pieces = 100f64;
-        //prepare to draw a fuarking rectangle (1 rep)        
+        //prepare to draw a rectangle (1 rep)        
         let divs = get_divsions_count(pieces);
         let xdivs = subdivide(xratio*2f64, divs.1);
         let ydivs = subdivide(yratio*2f64, divs.0);
-        //confused? me too.
         let points = cbounds(xdivs, ydivs);
 
     for i in (0..points.0.len()-1).step_by(2){
@@ -208,7 +206,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let data2 = splinerx0v0(graphe);
         chart.draw_series(LineSeries::new(data2, &BLACK))?;
     } 
-    //drawing the rectangle (fuuuuuuuuark)
+    //drawing the rectangle
     let rectangle = vec![(-1.0*xratio, -1.0*yratio), (1.0*xratio, -1.0*yratio), (1.0*xratio, 1.0*yratio), (-1.0*xratio, 1.0*yratio), (-1.0*xratio, -1.0*yratio)];
     chart.draw_series(std::iter::once(PathElement::new(rectangle.clone(), &BLACK)))?;
     // Save the chart to a file
